@@ -22,16 +22,21 @@ This project is designed for people who want an assistant that is less likely to
 
 ## Files
 
-- [`AGENTS.md`](./AGENTS.md): English version of the reusable instruction profile.
-- [`AGENTS.zh-CN.md`](./AGENTS.zh-CN.md): Simplified Chinese version.
-- [`examples/chatgpt-custom-instructions.zh-CN.md`](./examples/chatgpt-custom-instructions.zh-CN.md): A version adapted for ChatGPT custom instructions.
+- [`AGENTS.md`](./AGENTS.md): The reusable instruction profile.
+- [`examples/chatgpt-custom-instructions.md`](./examples/chatgpt-custom-instructions.md): A version adapted for ChatGPT custom instructions.
 - [`examples/domain-adaptations.md`](./examples/domain-adaptations.md): Optional domain-specific extensions.
 
 ## Recommended Use
 
 Copy `AGENTS.md` into the root of a project that supports agent instruction files, or adapt the content into your assistant's custom instruction settings.
 
-For Chinese-first workflows, use `AGENTS.zh-CN.md` or the ChatGPT example in `examples/`.
+If your tool supports packaged skills, this profile can also be wrapped as a skill. Keep the repository centered on `AGENTS.md` unless you are publishing an installable skill package with its own manifest, runtime assumptions, and invocation rules.
+
+## Why Not Call It A Skill?
+
+The word "skill" is useful when the project provides a packaged capability that an agent can install, discover, and invoke. This project is currently a portable instruction profile: users can copy it into `AGENTS.md`, adapt it for ChatGPT custom instructions, or wrap it into a skill in their own toolchain.
+
+Keeping the name focused on `AGENTS.md` makes the artifact clear and discoverable. If a packaged skill is added later, it can live alongside the core profile without renaming the whole project.
 
 ## Adaptation Guide
 
