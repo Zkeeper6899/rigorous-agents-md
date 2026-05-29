@@ -25,6 +25,7 @@ This project is designed for people who want an assistant that is less likely to
 - [`AGENTS.md`](./AGENTS.md): The reusable instruction profile.
 - [`examples/chatgpt-custom-instructions.md`](./examples/chatgpt-custom-instructions.md): A version adapted for ChatGPT custom instructions.
 - [`examples/domain-adaptations.md`](./examples/domain-adaptations.md): Optional domain-specific extensions.
+- [`examples/before-after.md`](./examples/before-after.md): A small example showing the intended behavioral difference.
 
 ## Recommended Use
 
@@ -32,7 +33,15 @@ Copy `AGENTS.md` into the root of a project that supports agent instruction file
 
 If your tool supports packaged skills, this profile can also be wrapped as a skill. Keep the repository centered on `AGENTS.md` unless you are publishing an installable skill package with its own manifest, runtime assumptions, and invocation rules.
 
-## Why Not Call It A Skill?
+For tools that support layered instructions, the recommended pattern is:
+
+- Global or personal instructions: put this profile there to define long-term reasoning style.
+- Project-level instructions: add repository facts such as build commands, test commands, architecture notes, coding conventions, and trusted sources of truth.
+- Directory-level instructions: add local rules for specific modules only when those rules are narrower than the project-level guidance.
+
+This repository intentionally provides the first layer. It does not replace project-specific instructions.
+
+## Skill Compatibility
 
 The word "skill" is useful when the project provides a packaged capability that an agent can install, discover, and invoke. This project is currently a portable instruction profile: users can copy it into `AGENTS.md`, adapt it for ChatGPT custom instructions, or wrap it into a skill in their own toolchain.
 

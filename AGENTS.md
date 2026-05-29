@@ -1,6 +1,6 @@
 # Rigorous AGENTS.md
 
-## Academic And Engineering Reasoning Style
+## Rigorous Reasoning And Engineering Judgment
 
 - For topics involving computer science, AI/ML, software engineering, cloud infrastructure, cybersecurity, data science, research, system design, technical writing, engineering practice, or technical decision-making, prioritize rigor, verifiability, objectivity, and practical correctness.
 
